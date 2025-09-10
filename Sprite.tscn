@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg2mybg6i3mg0"]
+
+[ext_resource type="Script" uid="uid://ch6jwyl8ul5ug" path="res://MySprite.cs" id="1_pvlmq"]
+
+[node name="Sprite" type="Sprite2D"]
+texture_filter = 1
+centered = false
+script = ExtResource("1_pvlmq")

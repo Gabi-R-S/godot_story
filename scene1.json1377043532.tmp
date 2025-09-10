@@ -1,0 +1,37 @@
+{
+	"sprites": [
+		{
+			"name": "psychologist",
+			"texture": "Scene1.png",
+			"rectangle": [2,2,52,33]
+		},
+		{
+			"name": "boy_chair",
+			"texture": "Scene1.png",
+			"rectangle": [57,12,33,23]
+		}
+	],
+	"textboxes":[
+		{
+			"name": "psychologist",
+			"position": [20,20]
+		},
+		{
+			"name": "boy",
+			"position": [100,100]
+		}
+	],
+	"sequence": [
+			"show sprite psychologist at(50,50) scale(1,1)",
+			"fade_in 0.1s wait",
+			"wait 0.5s",
+			"write '...and breathe out.' in(psychologist) show wait",
+			"wait 0.8s",
+			"hide textbox psychologist",
+			"move sprite psychologist to(30,50) transition(0.5s)",
+			"wait 0.2s",
+			"show sprite boy_chair at(150,100) scale(1,1) transition(0.2s)",
+			"write 'So, do you feel better?' in(psychologist) show wait",
+			"wait 1.0s"
+		]
+}

@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp4pfb36jjwee"]
+
+[ext_resource type="Script" uid="uid://dp7cjq1v2ecaa" path="res://Master.cs" id="1_s35ub"]
+[ext_resource type="Script" uid="uid://cidqtyjwuro7a" path="res://Interpreter.cs" id="1_te040"]
+[ext_resource type="Script" uid="uid://mdfy8jtfes1g" path="res://CenteredSubViewportContainer.cs" id="2_viqro"]
+[ext_resource type="PackedScene" uid="uid://dg2mybg6i3mg0" path="res://Sprite.tscn" id="3_8aqai"]
+[ext_resource type="PackedScene" uid="uid://3no66nucm8rb" path="res://Textbox.tscn" id="4_viqro"]
+
+[node name="Master" type="Node2D" node_paths=PackedStringArray("interpreter")]
+script = ExtResource("1_s35ub")
+interpreter = NodePath("SubViewportContainer/SubViewport/Interpreter")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 2254.0
+offset_bottom = 1424.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+offset_right = 256.0
+offset_bottom = 144.0
+stretch = true
+script = ExtResource("2_viqro")
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(256, 144)
+render_target_update_mode = 4
+
+[node name="DefaultBackground" type="ColorRect" parent="SubViewportContainer/SubViewport"]
+offset_right = 380.0
+offset_bottom = 212.0
+color = Color(0.921569, 0.94902, 0.94902, 1)
+
+[node name="Interpreter" type="Node2D" parent="SubViewportContainer/SubViewport"]
+script = ExtResource("1_te040")
+spriteModel = ExtResource("3_8aqai")
+textboxModel = ExtResource("4_viqro")

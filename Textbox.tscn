@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://3no66nucm8rb"]
+
+[ext_resource type="Script" uid="uid://drmvkmh3hgip3" path="res://Textbox.cs" id="1_cxdj2"]
+[ext_resource type="FontFile" uid="uid://drneqffdysb2e" path="res://TeenyTinyPixlsFont.ttf" id="1_o7f33"]
+
+[node name="Textbox" type="Node2D"]
+script = ExtResource("1_cxdj2")
+
+[node name="TextboxText" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_right = 120.0
+offset_bottom = 120.0
+theme_override_fonts/normal_font = ExtResource("1_o7f33")
+theme_override_fonts/mono_font = ExtResource("1_o7f33")
+theme_override_fonts/italics_font = ExtResource("1_o7f33")
+theme_override_fonts/bold_italics_font = ExtResource("1_o7f33")
+theme_override_fonts/bold_font = ExtResource("1_o7f33")
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 1
+theme_override_font_sizes/normal_font_size = 5
+theme_override_font_sizes/bold_font_size = 0
+text = "fgwegwegwegwegweg"
+fit_content = true
+scroll_active = false
