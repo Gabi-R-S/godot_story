@@ -79,7 +79,128 @@
         36.0,
         25.0
       ]
+    },
+    {
+      "name": "bed_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        63.0,
+        36.0,
+        40.0,
+        16.0
+      ]
+    },
+    {
+      "name": "table_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        112.0,
+        42.0,
+        46.0,
+        29.0
+      ]
+    },
+    {
+      "name": "table_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        64.0,
+        54.0,
+        46.0,
+        29.0
+      ]
+    },
+    {
+      "name": "door_opening",
+      "texture": "Scene2.png",
+      "rectangle": [
+        160.0,
+        48.0,
+        16.0,
+        32.0
+      ]
+    },
+    {
+      "name": "door_open",
+      "texture": "Scene2.png",
+      "rectangle": [
+        181.0,
+        48.0,
+        22.0,
+        32.0
+      ]
+    },
+    {
+      "name": "mom_1",
+      "texture": "Scene2.png",
+      "rectangle": [
+        208.0,
+        48.0,
+        32.0,
+        32.0
+      ]
+    },
+    {
+      "name": "mom_2",
+      "texture": "Scene2.png",
+      "rectangle": [
+        208.0,
+        9.0,
+        32.0,
+        32.0
+      ]
+    },
+    {
+      "name": "book",
+      "texture": "Scene2.png",
+      "rectangle": [
+        0,
+        60,
+        16,
+        16
+      ]
+    },
+    {
+      "name": "calculator",
+      "texture": "Scene2.png",
+      "rectangle": [
+        0,
+        80,
+        15,
+        16
+      ]
+    },
+    {
+      "name": "tabletop_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        16,
+        62,
+        48,
+        43
+      ]
+    },
+    {
+      "name": "tabletop_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        13,
+        108,
+        48,
+        43
+      ]
+    },
+    {
+      "name": "tabletop_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        64,
+        101,
+        48,
+        43
+      ]
     }
+
   ],
   "textboxes": [
     {
