@@ -1,0 +1,183 @@
+{
+	"sprites": [
+		{
+			"name": "psychologist",
+			"texture": "Scene1.png",
+			"rectangle": [
+				2.0,
+				2.0,
+				52.0,
+				33.0
+			]
+		},
+		{
+			"name": "boy_chair",
+			"texture": "Scene1.png",
+			"rectangle": [
+				57.0,
+				12.0,
+				33.0,
+				23.0
+			]
+		},
+		{
+			"name": "boy_shrug_1",
+			"texture": "Scene1.png",
+			"rectangle": [
+				8.0,
+				40.0,
+				32.0,
+				32.0
+			]
+		},
+		{
+			"name": "boy_shrug_2",
+			"texture": "Scene1.png",
+			"rectangle": [
+				49.0,
+				40.0,
+				32.0,
+				32.0
+			]
+		}
+	],
+	"textboxes": [
+		{
+			"name": "psychologist",
+			"position": [
+				80.0,
+				20.0
+			],
+			"color": [
+				0.2375,
+				0.25,
+				0.2667,
+				1.0
+			],
+			"text_speed": 8.0
+		},
+		{
+			"name": "boy",
+			"position": [
+				100.0,
+				100.0
+			],
+			"color": [
+				0.2375,
+				0.25,
+				0.2667,
+				1.0
+			],
+			"text_speed": 3.0
+		},
+		{
+			"name": "narration_1",
+			"position": [
+				150.0,
+				20.0
+			],
+			"color": [
+				0.2375,
+				0.25,
+				0.2667,
+				1.0
+			],
+			"text_speed": 10.0
+		},
+		{
+			"name": "narration_2",
+			"position": [
+				140.0,
+				130.0
+			],
+			"color": [
+				0.2375,
+				0.25,
+				0.2667,
+				1.0
+			],
+			"text_speed": 10.0
+		}
+	],
+	"background_layers": [
+		{
+			"name": "test",
+			"type": "color",
+			"color": [
+				0.92,
+				0.95,
+				0.95,
+				1.0
+			],
+			"show": true
+		}
+	],
+	"sequence": [
+		"fade_out 1.5s wait",
+		"show sprite psychologist at(70,50) scale(2,2)",
+		"fade_in 1.5s wait",
+		"wait 1.0s",
+		"write '...and breathe out.' in(psychologist) show wait",
+		"wait 1.0s",
+		"hide textbox psychologist",
+		"move textbox psychologist to(35,20) transition(0.3s)",
+		"move sprite psychologist to(30,50) transition(1.0s)",
+		"wait 1.0s",
+		"show sprite boy_chair at(150,80) scale(2,2) transition(1.0s)",
+		"write 'So, do you feel better?' in(psychologist) show wait",
+		"wait 1.0s",
+		"hide textbox psychologist",
+		"hide sprite psychologist",
+		"hide sprite boy_chair transition(0.5s) wait",
+		"show sprite boy_shrug_1 at(96,40) scale(2,2)",
+		"wait 1.0s",
+		"show sprite boy_shrug_2 at(96,40) scale(2,2)",
+		"hide sprite boy_shrug_1",
+		"wait 1.0s",
+		"hide sprite boy_shrug_2",
+		"show sprite boy_shrug_1",
+		"wait 1.0s",
+		"hide sprite boy_shrug_1",
+		"show sprite psychologist",
+		"wait 0.1s",
+		"move sprite psychologist to(70,50) transition(0.5s) wait",
+		"write 'I\\'ve seen the drawings you posted.' in(psychologist) show at(70,20) wait",
+		"wait 0.5s",
+		"hide textbox psychologist to(40,20)",
+		"write 'You\\'re a very talented girl. You know that,right?' in(psychologist) show wait",
+		"move sprite psychologist to(20,50) transition(0.5s)",
+		"wait 0.8s",
+		"show sprite boy_shrug_1 at(140,50)",
+		"wait 2.0s",
+		"write 'I\\'m not a girl.' in(narration_1) show",
+		"wait 0.1s",
+		"hide textbox psychologist",
+		"write 'I can\\' tell her that.' in(narration_2) show wait",
+		"wait 1.0s",
+		"hide textbox narration_1",
+		"hide sprite boy_shrug_1",
+		"move textbox psychologist to(70,20) transition(0.5s)",
+		"move sprite psychologist to(70,50) transition(0.5s) wait",
+		"write 'I can see how much of yourself you pour into your art.' in(psychologist) show",
+		"wait(0.5s)",
+		"hide textbox narration_2",
+		"write 'Would you accept if I asked you to draw one of your emotions?' in(psychologist) wait",
+		"wait 0.5s",
+		"write 'It could help you put it into words.' in(psychologist) wait",
+		"wait 0.5s",
+		"hide textbox psychologist",
+		"move sprite psychologist to(40,50) transition(1.0s) wait",
+		"show sprite boy_shrug_1",
+		"wait 1.0s",
+		"write 'Yes.' in(boy) wait show",
+		"wait 0.5s",
+		"hide textbox boy",
+		"hide sprite boy_shrug_1",
+		"move sprite psychologist to(30,50) transition(1.0s) wait",
+		"show sprite boy_chair transition(0.5s) wait",
+		"write 'This is my chance to make her see me.' in(narration_1) show wait",
+		"wait 0.5s",
+		"fade_out 1.5s wait",
+		"scene scene_2"
+	]
+}

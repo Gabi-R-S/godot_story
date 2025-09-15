@@ -1,0 +1,414 @@
+{
+  "sprites": [
+    {
+      "name": "boy_back_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        0.0,
+        0.0,
+        24.0,
+        36.0
+      ]
+    },
+    {
+      "name": "boy_back_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        24.0,
+        0.0,
+        24.0,
+        36.0
+      ]
+    },
+    {
+      "name": "boy_back_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        48.0,
+        0.0,
+        24.0,
+        36.0
+      ]
+    },
+    {
+      "name": "boy_front_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        76.0,
+        12.0,
+        5.0,
+        20.0
+      ]
+    },
+    {
+      "name": "door_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        82.0,
+        2.0,
+        29.0,
+        31.0
+      ]
+    },
+    {
+      "name": "table_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        113.0,
+        2.0,
+        46.0,
+        30.0
+      ]
+    },
+    {
+      "name": "physics",
+      "texture": "Scene2.png",
+      "rectangle": [
+        0.0,
+        36.0,
+        26.0,
+        24.0
+      ]
+    },
+    {
+      "name": "maths",
+      "texture": "Scene2.png",
+      "rectangle": [
+        26.0,
+        36.0,
+        36.0,
+        25.0
+      ]
+    },
+    {
+      "name": "bed_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        63.0,
+        36.0,
+        42.0,
+        17.0
+      ]
+    },
+    {
+      "name": "table_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        112.0,
+        42.0,
+        46.0,
+        30.0
+      ]
+    },
+    {
+      "name": "table_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        64.0,
+        54.0,
+        46.0,
+        30.0
+      ]
+    },
+    {
+      "name": "door_opening",
+      "texture": "Scene2.png",
+      "rectangle": [
+        160.0,
+        48.0,
+        16.0,
+        32.0
+      ]
+    },
+    {
+      "name": "door_open",
+      "texture": "Scene2.png",
+      "rectangle": [
+        181.0,
+        48.0,
+        22.0,
+        32.0
+      ]
+    },
+    {
+      "name": "mom_1",
+      "texture": "Scene2.png",
+      "rectangle": [
+        208.0,
+        48.0,
+        32.0,
+        32.0
+      ]
+    },
+    {
+      "name": "mom_2",
+      "texture": "Scene2.png",
+      "rectangle": [
+        208.0,
+        9.0,
+        32.0,
+        32.0
+      ]
+    },
+    {
+      "name": "book",
+      "texture": "Scene2.png",
+      "rectangle": [
+        0,
+        60,
+        16,
+        16
+      ]
+    },
+    {
+      "name": "calculator",
+      "texture": "Scene2.png",
+      "rectangle": [
+        0,
+        80,
+        15,
+        16
+      ]
+    },
+    {
+      "name": "tabletop_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        16,
+        62,
+        48,
+        43
+      ]
+    },
+    {
+      "name": "tabletop_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        13,
+        108,
+        48,
+        43
+      ]
+    },
+    {
+      "name": "tabletop_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        64,
+        101,
+        48,
+        43
+      ]
+    },
+    {
+      "name": "boy_table_sat_on_ground_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        66,
+        80,
+        15,
+        12
+      ]
+    },
+    {
+      "name": "scribles",
+      "texture": "Scene2.png",
+      "rectangle": [
+        84,
+        88,
+        7,
+        7
+      ]
+    },
+    {
+      "name": "boy_table_looking_back_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        116,
+        85,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "boy_table_leaning_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        124,
+        86,
+        7,
+        17
+      ]
+    },
+    {
+      "name": "boy_table_leaning_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        142,
+        87,
+        9,
+        16
+      ]
+    },
+    {
+      "name": "boy_table_standing_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        159,
+        85,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "boy_table_looking_back_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        167,
+        87,
+        8,
+        16
+      ]
+    },
+    {
+      "name": "boy_table_leaning_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        179,
+        87,
+        7,
+        11
+      ]
+    },
+    {
+      "name": "boy_table_working_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        188,
+        83,
+        10,
+        17
+      ]
+    },
+    {
+      "name": "boy_table_sleeping_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        120,
+        107,
+        9,
+        13
+      ]
+    },
+    {
+      "name": "boy_table_sitting_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        120,
+        107,
+        9,
+        13
+      ]
+    },
+    {
+      "name": "boy_table_sitting_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        143,
+        107,
+        9,
+        13
+      ]
+    },
+    {
+      "name": "boy_walk_1",
+      "texture": "Scene2.png",
+      "rectangle": [
+        153,
+        107,
+        6,
+        20
+      ]
+    },
+    {
+      "name": "boy_walk_2",
+      "texture": "Scene2.png",
+      "rectangle": [
+        161,
+        107,
+        6,
+        20
+      ]
+    },
+    {
+      "name": "boy_walk_3",
+      "texture": "Scene2.png",
+      "rectangle": [
+        169,
+        107,
+        6,
+        20
+      ]
+    }
+
+
+  ],
+  "textboxes": [
+    {
+      "name": "narration",
+      "position": [
+        80.0,
+        20.0
+      ],
+      "color": [
+        0.2375,
+        0.25,
+        0.2667,
+        1.0
+      ],
+      "text_speed": 2.0
+    },
+    {
+      "name": "mom",
+      "position": [
+        100.0,
+        100.0
+      ],
+      "color": [
+        0.2375,
+        0.25,
+        0.2667,
+        1.0
+      ],
+      "text_speed": 5.0
+    }
+  ],
+  "background_layers": [
+  ],
+  "sequence": [
+    "show sprite boy_front_night at(122,70,100) scale(2,2)",
+    "show sprite door_night at(98,50) scale(2,2)",
+    "fade_in 3.0s wait",
+    "show sprite table_night at(4,52) scale(2,2) transition(1.5s)",
+    "show sprite bed_night at(162,78) scale(2,2) transition(1.5s) wait",
+    "wait 2.0s",
+    "move sprite bed_night to(256,78) transition(2.5s)",
+    "move sprite door_night to(256,50) transition(2.5s)",
+    "move sprite table_night to(82,52) transition(2.5s)",
+    "hide sprite boy_front_night",
+    "show sprite boy_walk_1 at(122,70,100) scale(2,2)",
+    "move sprite boy_walk_1 to(126,70) wait transition(0.5s)",
+    "hide sprite boy_walk_1",
+    "show sprite boy_walk_2 at(126,70,100) scale(2,2)",
+    "move sprite boy_walk_2 to(128,70) wait transition(0.5s)",
+    "hide sprite boy_walk_2",
+    "show sprite boy_walk_1 at(128,70)",
+    "move sprite boy_walk_1 to(132,70) wait transition(0.5s)",
+    "hide sprite boy_walk_1",
+    "show sprite boy_walk_3 at(132,70) scale(2,2)",
+    "move sprite boy_walk_3 to(136,70) wait transition(0.5s)",
+    "hide sprite boy_walk_3",
+    "show sprite boy_walk_1 at(136,70)"
+
+  ]
+}
