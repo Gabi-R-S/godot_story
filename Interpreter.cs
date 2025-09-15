@@ -397,7 +397,12 @@ public partial class Interpreter : Node2D
                             obj = textboxes[name];
                         }
 
-                        Vector2 movePos = Vector2.Zero;
+                        if (ContainsSubCommand(prts, "show"))
+                        {
+                            obj.Show();
+                        }
+
+                                Vector2 movePos = Vector2.Zero;
                         List<float> parseParams = GetParamsOfSubcommand(prts, "to");
                         if (parseParams != null)
                         {

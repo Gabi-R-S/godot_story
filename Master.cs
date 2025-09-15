@@ -14,9 +14,9 @@ public partial class Master : Node2D
         {
             started = true;
             var filenameDic = new System.Collections.Generic.Dictionary<string, string>();
-            filenameDic["scene_1"] = "scene1.json";
-            filenameDic["scene_2"] = "scene2.json";
-            filenameDic["scene_3"] = "scene3.json";
+            filenameDic["scene_1"] = "scene1.scn";
+            filenameDic["scene_2"] = "scene2.scn";
+            filenameDic["scene_3"] = "scene3.scn";
             interpreter?.RegisterFilenames(filenameDic);
             interpreter?.StartAnimation(startSceneName);
         }
