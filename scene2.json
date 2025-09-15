@@ -289,6 +289,66 @@
         10,
         17
       ]
+    },
+    {
+      "name": "boy_table_sleeping_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        120,
+        107,
+        9,
+        13
+      ]
+    },
+    {
+      "name": "boy_table_sitting_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        120,
+        107,
+        9,
+        13
+      ]
+    },
+    {
+      "name": "boy_table_sitting_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        143,
+        107,
+        9,
+        13
+      ]
+    },
+    {
+      "name": "boy_walk_1",
+      "texture": "Scene2.png",
+      "rectangle": [
+        153,
+        109,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "boy_walk_2",
+      "texture": "Scene2.png",
+      "rectangle": [
+        161,
+        109,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "boy_walk_3",
+      "texture": "Scene2.png",
+      "rectangle": [
+        168,
+        109,
+        6,
+        19
+      ]
     }
 
 
