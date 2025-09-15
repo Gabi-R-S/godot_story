@@ -199,7 +199,98 @@
         48,
         43
       ]
+    },
+    {
+      "name": "boy_table_sat_on_ground_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        66,
+        80,
+        15,
+        12
+      ]
+    },
+    {
+      "name": "scribles",
+      "texture": "Scene2.png",
+      "rectangle": [
+        84,
+        88,
+        7,
+        7
+      ]
+    },
+    {
+      "name": "boy_table_looking_back_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        116,
+        85,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "boy_table_leaning_night",
+      "texture": "Scene2.png",
+      "rectangle": [
+        124,
+        86,
+        7,
+        17
+      ]
+    },
+    {
+      "name": "boy_table_leaning_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        142,
+        87,
+        9,
+        16
+      ]
+    },
+    {
+      "name": "boy_table_standing_day",
+      "texture": "Scene2.png",
+      "rectangle": [
+        159,
+        85,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "boy_table_looking_back_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        167,
+        87,
+        8,
+        16
+      ]
+    },
+    {
+      "name": "boy_table_leaning_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        179,
+        87,
+        7,
+        11
+      ]
+    },
+    {
+      "name": "boy_table_working_sunset",
+      "texture": "Scene2.png",
+      "rectangle": [
+        188,
+        83,
+        10,
+        17
+      ]
     }
+
 
   ],
   "textboxes": [
