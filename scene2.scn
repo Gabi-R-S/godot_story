@@ -366,7 +366,7 @@
         0.2667,
         1.0
       ],
-      "text_speed": 2.0
+      "text_speed": 3.0
     },
     {
       "name": "mom",
@@ -408,7 +408,39 @@
     "show sprite boy_walk_3 at(132,70) scale(2,2)",
     "move sprite boy_walk_3 to(136,70) wait transition(0.5s)",
     "hide sprite boy_walk_3",
-    "show sprite boy_walk_1 at(136,70)"
+    "show sprite boy_walk_1 at(136,70)",
+    "wait 2.5s",
+    "hide sprite boy_walk_1 transition(1.5s)",
+    "hide sprite table_night transition(1.5s) wait",
+    "show sprite tabletop_night at(80,30) scale(2,2) transition(1.5s) wait",
+    "wait 1.5s",
+    "show sprite boy_back_night at(104,42,100) scale(2,2) transition(1.5s)",
+    "write 'I\\'ve heard that art is an escape, but...' in(narration) show at(52,120)",
+    "wait 3.5s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_back_night",
+    "hide sprite tabletop_night",
+    "show sprite tabletop_day at(80,30) scale(2,2)",
+    "show sprite boy_back_day at(104,42,100) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 3.5s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_back_day",
+    "hide sprite tabletop_day",
+    "show sprite tabletop_sunset at(80,30) scale(2,2)",
+    "show sprite boy_back_sunset at(104,42,100) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 3.5s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_back_sunset",
+    "hide sprite tabletop_sunset",
+    "show sprite table_night",
+    "show sprite boy_back_sunset at(104,42,100) scale(2,2)",
+    "write 'I don't know.' in(narration) at(60,120)" 
+    "fade_in 0.5s wait",
+    "wait 2.5s"
+
+
 
   ]
 }
