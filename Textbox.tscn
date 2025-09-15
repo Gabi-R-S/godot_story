@@ -5,11 +5,12 @@
 
 [node name="Textbox" type="Node2D"]
 script = ExtResource("1_cxdj2")
+metadata/_edit_vertical_guides_ = [97.0]
 
 [node name="TextboxText" type="RichTextLabel" parent="."]
 texture_filter = 1
-offset_right = 120.0
-offset_bottom = 120.0
+offset_right = 512.0
+offset_bottom = 512.0
 theme_override_fonts/normal_font = ExtResource("1_o7f33")
 theme_override_fonts/mono_font = ExtResource("1_o7f33")
 theme_override_fonts/italics_font = ExtResource("1_o7f33")

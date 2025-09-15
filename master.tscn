@@ -1,13 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp4pfb36jjwee"]
+[gd_scene load_steps=7 format=3 uid="uid://bp4pfb36jjwee"]
 
 [ext_resource type="Script" uid="uid://dp7cjq1v2ecaa" path="res://Master.cs" id="1_s35ub"]
 [ext_resource type="Script" uid="uid://cidqtyjwuro7a" path="res://Interpreter.cs" id="1_te040"]
 [ext_resource type="Script" uid="uid://mdfy8jtfes1g" path="res://CenteredSubViewportContainer.cs" id="2_viqro"]
 [ext_resource type="PackedScene" uid="uid://dg2mybg6i3mg0" path="res://Sprite.tscn" id="3_8aqai"]
 [ext_resource type="PackedScene" uid="uid://3no66nucm8rb" path="res://Textbox.tscn" id="4_viqro"]
+[ext_resource type="Script" uid="uid://bfghjs3d5ctox" path="res://AudioManager.cs" id="6_ofr4s"]
 
 [node name="Master" type="Node2D" node_paths=PackedStringArray("interpreter")]
 script = ExtResource("1_s35ub")
+startSceneName = "scene_2"
 interpreter = NodePath("SubViewportContainer/SubViewport/Interpreter")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -40,3 +42,6 @@ color = Color(0.921569, 0.94902, 0.94902, 1)
 script = ExtResource("1_te040")
 spriteModel = ExtResource("3_8aqai")
 textboxModel = ExtResource("4_viqro")
+
+[node name="AudioManager" type="Node" parent="."]
+script = ExtResource("6_ofr4s")

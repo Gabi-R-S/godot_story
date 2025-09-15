@@ -174,7 +174,43 @@ public partial class Interpreter : Node2D
             var prts = current.Split(' ', 2);
             
             switch (prts[0]) {
-                case "show":
+                        case "stop":
+                            {
+                                prts = prts[1].Split(' ');
+                                if (prts[0] == "sound")
+                                {
+                                    //impossible, because there is no reference.
+                                }
+                                else if (prts[0] == "music")
+                                {
+                                    AudioManager.instance?.StopMusic(prts[1]);
+                                }
+                            }
+                            break;
+                        case "play":
+                            {
+                                prts = prts[1].Split(' ');
+                                if (prts[0] == "sound")
+                                {
+                                    AudioManager.instance?.PlaySound(prts[1]);
+                                }
+                                else if (prts[0] == "music")
+                                {
+                                    AudioManager.instance?.PlayMusic(prts[1]);
+                                }
+                            }
+                            break;
+                        case "text_speed": // text_speed <textbox> to(<float>)
+                            { 
+                                prts = prts[1].Split(' ');
+                                var name = prts[0].Trim();
+                                var prms = GetParamsOfSubcommand(prts,"to");
+                                var speed = prms[0];
+                                textboxes["name"].SetCharactersPerSecond(speed);
+                            }
+
+                            break;
+                        case "show":
                     {
                         prts = prts[1].Split(' ');
                         Node2D obj;
@@ -209,6 +245,9 @@ public partial class Interpreter : Node2D
                         if (parseParams != null)
                         {
                             obj.Position = new Vector2(parseParams[0], parseParams[1]);
+                                    if (parseParams.Count==3) { 
+                                        obj.ZIndex = (int)parseParams[2];
+                                    }
                         }
 
                         parseParams = GetParamsOfSubcommand(prts, "scale");
@@ -298,6 +337,10 @@ public partial class Interpreter : Node2D
                                     if (parseParams != null)
                                     {
                                         textbox.Position = new Vector2(parseParams[0], parseParams[1]);
+                                        if (parseParams.Count == 3)
+                                        {
+                                            textbox.ZIndex = (int)parseParams[2];
+                                        }
                                     }
                                     textbox.Write(text,callback);
                             }
@@ -375,10 +418,18 @@ public partial class Interpreter : Node2D
                                 };
                             }
                             obj.MoveTo(movePos, prms[0], callback);
-                        }
+                            if (parseParams.Count == 3)
+                            {
+                                        obj.ZIndex = (int)parseParams[2];
+                             }
+                                }
                         else {
                             obj.Position = movePos;
-                        }
+                                    if (parseParams.Count == 3)
+                                    {
+                                        obj.ZIndex = (int)parseParams[2];
+                                    }
+                                }
 
 
 
@@ -404,7 +455,7 @@ public partial class Interpreter : Node2D
 
 
 
-    void LoadBackgrounds() {
+    void LoadBackgrounds(bool fullReset = false) {
         backgrounds = new();
 
         var bgData = jsonData.AsGodotDictionary()["background_layers"].AsGodotArray();
@@ -423,13 +474,15 @@ public partial class Interpreter : Node2D
                 }
             }
         }
-
-        fadeIn = new ColorRect();
-        fadeIn.Color = new Color(0, 0, 0, 1);
-        fadeIn.Size = GetViewportRect().Size;
-        fadeIn.Hide();
-        fadeIn.ZIndex = 1000;
-        AddChild(fadeIn);
+        if (fadeIn==null||fullReset)
+        {
+            fadeIn = new ColorRect();
+            fadeIn.Color = new Color(0, 0, 0, 1);
+            fadeIn.Size = GetViewportRect().Size;
+            fadeIn.Hide();
+            fadeIn.ZIndex = 1000;
+            AddChild(fadeIn);
+        }
     }
 
     void LoadTextboxes() {
@@ -511,29 +564,37 @@ public partial class Interpreter : Node2D
         
         this.nameToFilePaths=new Dictionary<string, string>(nameToFilePaths);
     }
-    public void StartAnimation(string firstSceneName) {
-        Start(nameToFilePaths[firstSceneName]);
+    public void StartAnimation(string firstSceneName,bool fullReset=false) {
+        Start(nameToFilePaths[firstSceneName],fullReset);
     }
-    void Start(string fileName)
+    void Start(string fileName, bool fullReset = false)
     {
         var file = FileAccess.Open(fileName, FileAccess.ModeFlags.Read);
         var content = file.GetAsText();
         var json = new Json();
         var res = json.Parse(content);
-       foreach (var c in GetChildren()) {
-            c.QueueFree();
+        foreach (var c in GetChildren())
+        {
+            if (c != fadeIn||fullReset)
+            {
+                c.QueueFree();
+            }
         }
         if (res == Error.Ok)
         {
+            GD.Print("Here!");
             jsonData = json.Data;
             sequence = jsonData.AsGodotDictionary()["sequence"].AsGodotArray();
 
-            LoadBackgrounds();
+            LoadBackgrounds(fullReset);
             LoadSprites();
             LoadTextboxes();
-            
+
             indexInSequence = 0;
             ProcessNext();
+        }
+        else {
+            GD.PrintErr("Error parsing file!");
         }
     }
 

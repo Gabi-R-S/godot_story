@@ -3,6 +3,7 @@ using System;
 
 public partial class Textbox : Node2D
 {
+    bool keyboardSound = true;
     public override void _Ready() {
         textLabel = GetChild<RichTextLabel>(0);
         textLabel.Text = "";
@@ -39,18 +40,20 @@ public partial class Textbox : Node2D
 
     public override void _Process(double delta)
     {
+        
         if (currentIndex >= fullText.Length && writeCallback != null)
         {
             writeCallback();
             writeCallback = null;
         }
-
+        bool lettersAdded = false;
         counter += (float)delta;
         while (counter >= letterTime)
         {
             counter -=letterTime;
             if (currentIndex < fullText.Length)
             {
+                lettersAdded = true;
                 currentIndex++;
 
                 textLabel.Text = fullText.Substring(0, currentIndex);
@@ -58,6 +61,15 @@ public partial class Textbox : Node2D
             }
             
             
+        }
+        if (lettersAdded && keyboardSound) {
+            if (AudioManager.instance != null)
+            {
+                if (!AudioManager.instance.IsPlayingSound("text_sound", this))
+                {
+                    AudioManager.instance.PlaySound("keyboard", false, this);
+                }
+            }
         }
     }
 
