@@ -205,7 +205,7 @@
       "texture": "Scene2.png",
       "rectangle": [
         66,
-        80,
+        85,
         15,
         12
       ]
@@ -247,7 +247,7 @@
         143,
         87,
         9,
-        16
+        17
       ]
     },
     {
@@ -257,7 +257,7 @@
         159,
         85,
         6,
-        19
+        20
       ]
     },
     {
@@ -436,17 +436,53 @@
     "hide sprite boy_back_sunset",
     "hide sprite tabletop_sunset",
     "show sprite table_night",
-    "show sprite boy_table_leaning_night at(134,76,100) scale(2,2)",
-    "write 'I don\\'t know.' in(narration) at(64,120)",
+    "show sprite boy_table_leaning_night at(132,76,100) scale(2,2)",
+    "write 'I don\\'t know.' in(narration) at(100,120)",
     "fade_in 0.5s wait",
     "wait 3.5s",
     "fade_out 0.5s wait",
     "hide sprite boy_table_leaning_night",
     "hide sprite table_night",
     "show sprite table_day at(82,52) scale(2,2)",
-    "show sprite boy_table_leaning_day at(142,72,98) scale(2,2)",
+    "show sprite boy_table_leaning_day at(138,74,98) scale(2,2)",
     "fade_in 0.5s wait",
-    "wait 3.0s"
+    "wait 3.0s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_leaning_day",
+    "hide sprite table_day",
+    "show sprite table_sunset at(82,52) scale(2,2)",
+    "show sprite boy_table_leaning_sunset at(138,76,98) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 2.5s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_leaning_sunset",
+    "hide sprite table_sunset",
+    "show sprite table_night",
+    "show sprite boy_table_sleeping_night at(140,84,98) scale(2,2)",
+    "write 'Sometimes it feels like the only place where I\\'m real.' in(narration) at(24,120)",
+    "fade_in 0.5s wait",
+    "wait 2.0s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_sleeping_night",
+    "hide sprite table_night",
+    "show sprite table_day",
+    "show sprite boy_table_standing_day at(134,70,98) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 1.5s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_standing_day",
+    "hide sprite table_day",
+    "show sprite table_sunset",
+    "show sprite boy_table_working_sunset at(138,74,98) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 1.0s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_working_sunset",
+    "hide sprite table_sunset",
+    "show sprite table_night",
+    "show sprite boy_table_sat_on_ground_night at(110,90,98) scale(2,2)",
+    "fade_in 0.5s wait"
+
 
 
 

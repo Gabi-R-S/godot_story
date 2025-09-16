@@ -21,6 +21,34 @@ public partial class Interpreter : Node2D
     int indexInSequence = 0;
     Godot.Collections.Array sequence;
  
+    
+    List<(float,Action)> events = new List<(float, Action)>();
+
+    public override void _Process(double delta)
+    {
+        
+        for (int i = events.Count - 1; i >= 0; i--)
+        {
+            var (timeLeft, action) = events[i];
+            timeLeft -= (float)delta;
+            if (timeLeft <= 0)
+            {
+                action();
+                events.RemoveAt(i);
+            }
+            else
+            {
+                events[i] = (timeLeft, action);
+            }
+        }
+        if (Input.IsKeyPressed(Key.Z))
+        {
+            Engine.TimeScale = 4.0f;
+        }
+        else { 
+            Engine.TimeScale = 1.0f;
+        }
+    }
 
     (string,string) ParseStringAtStartOfCommand(string command)//assumes first readable character is the " that delimits the string 
     {
@@ -290,20 +318,16 @@ public partial class Interpreter : Node2D
                             }
                             break;
                         case "wait":
-                    {
-                        var time = float.Parse(prts[1].Trim().TrimEnd('s'));
-                        allowContinue = false;
-                        System.Timers.Timer t = new System.Timers.Timer(time * 1000);
-                        t.AutoReset = false;
-                        t.Elapsed += (object? sender, System.Timers.ElapsedEventArgs e) =>
-                        {
-                            //GD.Print("Timer elapsed");
-                            // We need to call ProcessNext on the main thread
-                            CallDeferred(nameof(ProcessNext));
-                            t.Dispose();
-                        };
-                        t.Start();
-                    }
+                            {
+                                var time = float.Parse(prts[1].Trim().TrimEnd('s'));
+                                allowContinue = false;
+                        
+                                events.Add((time, () =>
+                                {
+                                    CallDeferred(nameof(ProcessNext));
+                                }));
+                      
+                            }
                     break;
                 case "write":
                         {
