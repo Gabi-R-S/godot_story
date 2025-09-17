@@ -76,8 +76,8 @@
       "rectangle": [
         26.0,
         36.0,
-        36.0,
-        25.0
+        37.0,
+        26.0
       ]
     },
     {
@@ -126,7 +126,7 @@
       "rectangle": [
         181.0,
         48.0,
-        22.0,
+        23.0,
         32.0
       ]
     },
@@ -287,7 +287,7 @@
         188,
         83,
         10,
-        17
+        18
       ]
     },
     {
@@ -304,10 +304,10 @@
       "name": "boy_table_sitting_night",
       "texture": "Scene2.png",
       "rectangle": [
-        120,
-        107,
-        9,
-        13
+        135,
+        109,
+        6,
+        19
       ]
     },
     {
@@ -315,9 +315,9 @@
       "texture": "Scene2.png",
       "rectangle": [
         143,
-        107,
-        9,
-        13
+        109,
+        6,
+        19
       ]
     },
     {
@@ -466,11 +466,11 @@
     "hide sprite boy_table_sleeping_night",
     "hide sprite table_night",
     "show sprite table_day",
-    "show sprite boy_table_standing_day at(134,70,98) scale(2,2)",
+    "show sprite boy_table_sitting_day at(146,74,98) scale(2,2)",
     "fade_in 0.5s wait",
     "wait 1.5s",
     "fade_out 0.5s wait",
-    "hide sprite boy_table_standing_day",
+    "hide sprite boy_table_sitting_day",
     "hide sprite table_day",
     "show sprite table_sunset",
     "show sprite boy_table_working_sunset at(138,74,98) scale(2,2)",
@@ -480,12 +480,75 @@
     "hide sprite boy_table_working_sunset",
     "hide sprite table_sunset",
     "show sprite table_night",
-    "show sprite boy_table_sat_on_ground_night at(110,90,98) scale(2,2)",
-    "fade_in 0.5s wait"
-
-
-
-
+    "show sprite boy_table_sat_on_ground_night at(110,88,98) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 1.0s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_sat_on_ground_night",
+    "hide sprite table_night",
+    "show sprite table_day",
+    "show sprite boy_table_standing_day at(134,70,98) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 1.0s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_standing_day",
+    "hide sprite table_day",
+    "show sprite table_sunset",
+    "show sprite boy_table_looking_back_sunset at(146,78,98) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 1.0s",
+    "fade_out 0.5s wait",
+    "hide sprite boy_table_looking_back_sunset",
+    "hide sprite table_sunset",
+    "show sprite table_night",
+    "show sprite boy_table_sitting_night at(146,74,98) scale(2,2)",
+    "fade_in 0.5s wait",
+    "wait 4.5s",
+    "hide textbox narration",
+    "wait 1.0s",
+    "hide sprite boy_table_sitting_night",
+    "show sprite boy_table_looking_back_night at(146,72,98) scale(2,2)",
+    "wait 1.0s",
+    "hide sprite boy_table_looking_back_night",
+    "hide sprite table_night",
+    "show sprite door_opening at(112,44) scale(2,2) transition(1.5s) wait",
+    "wait 1.0s",
+    "hide sprite door_opening",
+    "show sprite door_open at(106,44) scale(2,2)",
+    "wait 1.0s",
+    "write 'Come on, dinner is ready!' in(mom) show at(70,120) wait",
+    "wait 1.0s",
+    "hide textbox mom",
+    "wait 1.5s",
+    "hide sprite door_open",
+    "show sprite mom_1 at(96,46,90) scale(2,2) transition(1.0s) wait",
+    "wait 1.0s",
+    "show sprite mom_2 at(96,46,92) scale(2,2)",
+    "wait 1.0s",
+    "hide sprite mom_2",
+    "write 'Have you studied anything at all, at least?' in(mom) show at(38,120) wait",
+    "wait 1.0s",
+    "hide textbox mom",
+    "wait 1.0s",
+    "hide sprite mom_1 transition(1.5s)",
+    "show sprite maths at(30,20,100) transition(1.0s) scale(2,2)",
+    "wait 0.5s",
+    "show sprite physics at(160,90,100) transition(1.0s) scale(2,2)",
+    "wait 0.5",
+    "show sprite book at(60,100,100) transition(1.0s) scale(2,2)",
+    "show sprite calculator at(172,26,100) transition(1.0s) scale(2,2) wait",
+    "wait 2.0s",
+    "show sprite tabletop_night transition(1.5s)",
+    "show sprite scribles at(120,86) scale(2,2) transition(1.5s)",
+    "wait 1.0s",
+    "hide sprite maths transition(1.5s)",
+    "hide sprite physics transition(1.5s)",
+    "hide sprite book transition(1.5s)",
+    "hide sprite calculator transition(1.5s)",
+    "write 'I\\'ve studied what school won\\'t teach me.' in(narration) at(40,120) wait show",
+    "wait 2.0s",
+    "fade_out 3.0s wait",
+    "scene scene_3"
 
   ]
 }
